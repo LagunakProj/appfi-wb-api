@@ -1,5 +1,5 @@
 from flask import Flask
-# from get_currenty import main
+from get_currenty import main
 
 app = Flask(__name__)
 
