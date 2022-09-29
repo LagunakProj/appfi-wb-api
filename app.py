@@ -1,4 +1,3 @@
-from turtle import pos
 from flask import Flask
 # from get_currenty import main
 
