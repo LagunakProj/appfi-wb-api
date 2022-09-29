@@ -1,6 +1,6 @@
 from turtle import pos
 from flask import Flask
-from get_currenty import main
+# from get_currenty import main
 
 app = Flask(__name__)
 
@@ -21,10 +21,11 @@ def post(post_id):
 
 @app.route('/conversor/<currency>-<amount>')
 def currency(currency, amount):
-    currency_info = main(currency)
-    final_money = str(float(amount) * float(currency_info))
-    print(final_money)
-    return f'{amount} {currency} to EUR is: {final_money}'
+    # currency_info = main(currency)
+    # final_money = str(float(amount) * float(currency_info))
+    # print(final_money)
+    # return f'{amount} {currency} to EUR is: {final_money}'
+    return f'{amount} {currency} to EUR is: '
 
 
 if __name__ == "__main__":
