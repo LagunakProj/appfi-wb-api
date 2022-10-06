@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask
 from get_currenty import main
 # from post_to_html import create_pdf
 import json
