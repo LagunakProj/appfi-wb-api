@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify
 from get_currenty import main
-from post_to_html import create_pdf
+# from post_to_html import create_pdf
 import json
 
 app = Flask(__name__)
@@ -27,15 +27,15 @@ def currency(currency, amount):
     return f'{amount} {currency} to EUR is: {final_money}'
 
 
-@app.route('/translator', methods=['POST'])
-def translator():
-    if request.method == 'POST':
-        # posted_json = jsonify(request.get_json())
-        # print(posted_json.get('total'))
-        create_pdf(request.get_json())
-        return 'PDF CREATED'
-    else:
-        return 'Hola GET'
+# @app.route('/translator', methods=['POST'])
+# def translator():
+#     if request.method == 'POST':
+#         # posted_json = jsonify(request.get_json())
+#         # print(posted_json.get('total'))
+#         # create_pdf(request.get_json())
+#         return 'PDF CREATED'
+#     else:
+#         return 'Hola GET'
 
 
 
