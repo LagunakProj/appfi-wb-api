@@ -1,0 +1,37 @@
+{
+    "info": {
+        "name": "Pepito",
+        "mail": "test@mail.com",
+        "tele": "+34 645245"
+    },
+    "moves": {
+        "OCIO": {
+            "test1": {
+                "ID": "0",
+                "CreatedAt": "20-10-2022",
+                "Title": "title test 1",
+                "Amount": "20"
+            },
+            "test2": {
+                "ID": "1",
+                "CreatedAt": "20-10-2022",
+                "Title": "title test 2",
+                "Amount": "27"
+            },
+            "test3": {
+                "ID": "2",
+                "CreatedAt": "20-10-2022",
+                "Title": "title test 3",
+                "Amount": "50"
+            }
+        },
+        "SALUD": {
+            "test1": {
+                "ID": "2",
+                "CreatedAt": "20-10-2022",
+                "Title": "title test salud 1",
+                "Amount": "350"
+            }
+        }
+    }
+}
