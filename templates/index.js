@@ -1,5 +1,5 @@
 function appendData(inf) {
-  fetch("../info.json")
+  fetch("info.json")
     .then(function (response) {
       return response.json();
     })
