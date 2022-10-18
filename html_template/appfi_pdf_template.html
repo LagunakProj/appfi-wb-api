@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<script src="index.js"> </script>
 		<meta charset="utf-8" />
 		<title>Appfi Invoice</title>
 
@@ -110,11 +111,13 @@
 									<img src="../src/Logo.png" style="width: 60%; max-width: 80px" />
 								</td>
 
-								<td>
-									Invoice #: 123<br />
+								<td id="today">
 									Created: January 1, 2015<br />
 									Due: February 1, 2015
 								</td>
+								<script>
+									appendToday()
+								</script>
 							</tr>
 						</table>
 					</td>
@@ -128,24 +131,17 @@
 									Appfi, Inc.
 								</td>
 
-								<td id="username">
+								<td id="name">
 									<script>
-										fetch('../info.json')
-											.then(function (response) {
-												return response.json();
-											})
-											.then(function (data) {
-												appendData(data);
-											})
-											.catch(function (err) {
-												console.log('error: ' + err);
-											});
-										function appendData(data) {
-											var mainContainer = document.getElementById("username");
-											var div = document.createElement("div");
-											div.innerHTML = data.info.name + '</br>' + data.info.mail;
-											mainContainer.appendChild(div);
-										}
+										appendData('name')
+									</script>
+								<td id="mail">
+									<script>
+										appendData('mail')
+									</script>
+								<td id="tele">
+									<script>
+										appendData('tele')
 									</script>
 							</td>
 

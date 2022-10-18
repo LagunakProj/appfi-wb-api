@@ -1,7 +1,8 @@
 {
     "info": {
         "name": "Pepito",
-        "mail": "test@mail.com"
+        "mail": "test@mail.com",
+        "tele": "+34 645245"
     },
     "moves": {
         "OCIO": {
