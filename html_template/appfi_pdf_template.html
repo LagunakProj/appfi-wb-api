@@ -128,18 +128,27 @@
 									Appfi, Inc.
 								</td>
 
-								<td id="username-mail">
-									USERNAME<br />
-									user@example.com
-								</td>
-								<script>
-									fetch("C:/Users/PC/workspace/our-wep-api/info.json")
-										.then(response => response.json())
-										.then(data => {
-											console.log(data)
-											document.querySelector('username-mail').innerHTML = data.info
-										})
-								</script>
+								<td id="username">
+									<script>
+										fetch('../info.json')
+											.then(function (response) {
+												return response.json();
+											})
+											.then(function (data) {
+												appendData(data);
+											})
+											.catch(function (err) {
+												console.log('error: ' + err);
+											});
+										function appendData(data) {
+											var mainContainer = document.getElementById("username");
+											var div = document.createElement("div");
+											div.innerHTML = data.info.name + '</br>' + data.info.mail;
+											mainContainer.appendChild(div);
+										}
+									</script>
+							</td>
+
 							</tr>
 						</table>
 					</td>
