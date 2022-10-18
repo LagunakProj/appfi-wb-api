@@ -41,48 +41,48 @@ def translator():
         return 'Hola GET'
 
 
-# @app.route('/info')
-# def info():
-#     return (render_template('home.html', nombre='te', mail='mailtest@gmail.com', listTest=['1', '2', '3']))
+@app.route('/info')
+def info():
+    return (render_template('home.html', nombre='te', mail='mailtest@gmail.com', listTest=['1', '2', '3']))
 
 
-# @app.route('/jsontest/<user>', methods=['POST', 'GET'])
-# def jsontest(user):
-#     ahora = datetime.now()
-#     d2 = ahora.strftime("%Y-%m-%d")
+@app.route('/jsontest/<user>', methods=['POST', 'GET'])
+def jsontest(user):
+    ahora = datetime.now()
+    d2 = ahora.strftime("%Y-%m-%d")
 
-#     movesList = {'OCIO': {"test1": {
-#         "ID": "0",
-#         "CreatedAt": "20-10-2022",
-#         "Title": "title test 1",
-#         "Amount": "20"
-#     },
-#         "test2": {
-#         "ID": "1",
-#         "CreatedAt": "20-10-2022",
-#         "Title": "title test 2",
-#         "Amount": "27"
-#     },
-#     },
-#         'SALUD': {"test1_salud": {
-#             "ID": "2",
-#             "CreatedAt": "20-10-2022",
-#             "Title": "title test salud 1",
-#             "Amount": "350"
-#         }}
-#     }
-#     if request.method == 'POST':
-#         test = request.get_json()
-#         name = test.get('info').get('name')
-#         mail = test.get('info').get('mail')
-#         categoryList = list(test.get('moves').keys())
-#         print(name)
-#         print(mail)
-#         print(categoryList)
-#         # print(type(test))
-#         return (render_template('home.html', nombre=name, mail=mail, categoryList=categoryList))
-#     else:
-#         return (render_template('home.html', nombre=user, mail='mailtest@gmail.com', today=d2, month_ago=d2, movesList=movesList))
+    movesList = {'OCIO': {"test1": {
+        "ID": "0",
+        "CreatedAt": "20-10-2022",
+        "Title": "title test 1",
+        "Amount": "20"
+    },
+        "test2": {
+        "ID": "1",
+        "CreatedAt": "20-10-2022",
+        "Title": "title test 2",
+        "Amount": "27"
+    },
+    },
+        'SALUD': {"test1_salud": {
+            "ID": "2",
+            "CreatedAt": "20-10-2022",
+            "Title": "title test salud 1",
+            "Amount": "350"
+        }}
+    }
+    if request.method == 'POST':
+        test = request.get_json()
+        name = test.get('info').get('name')
+        mail = test.get('info').get('mail')
+        categoryList = list(test.get('moves').keys())
+        print(name)
+        print(mail)
+        print(categoryList)
+        # print(type(test))
+        return (render_template('home.html', nombre=name, mail=mail, categoryList=categoryList))
+    else:
+        return (render_template('home.html', nombre=user, mail='mailtest@gmail.com', today=d2, month_ago=d2, movesList=movesList))
 
 
 if __name__ == "__main__":
