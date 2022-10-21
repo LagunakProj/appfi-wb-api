@@ -1,6 +1,7 @@
 
 from flask import Flask, request, jsonify, render_template
 from get_currenty import main
+from get_tbai_info import main_tbai
 import json
 from datetime import datetime
 
@@ -28,6 +29,12 @@ def currency(currency, amount):
     currency_info = main(currency)
     final_money = str(float(amount) * float(currency_info))
     return f'{amount} {currency} to EUR is: {final_money}'
+
+    
+@app.route('/tbaiqr/<id>')
+def tbaiqr(id):
+    tbai_info = main_tbai(id)
+    return f'This is the tbai info {tbai_info}'
 
 
 @app.route('/translator', methods=['POST'])
