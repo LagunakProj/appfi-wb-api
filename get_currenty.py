@@ -37,4 +37,3 @@ def main(divisa: str) -> None:
     return float(currency_number)
 
 
-main(divisa='USD')
