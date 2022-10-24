@@ -46,6 +46,11 @@ def info():
     return (render_template('home.html', nombre='te', mail='mailtest@gmail.com', listTest=['1', '2', '3']))
 
 
+@app.route('/create/<title>-<amount>')
+def create(title, amount):
+    return ({'title': title, 'amount': amount})
+
+
 @app.route('/jsontest/<user>', methods=['POST', 'GET'])
 def jsontest(user):
     ahora = datetime.now()
