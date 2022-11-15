@@ -1,0 +1,52 @@
+[
+  {
+    "title": "US Dollar",
+    "sym": "$",
+    "iso": "USD"
+  },
+  {
+    "title": "Euro",
+    "sym": "€",
+    "iso": "EUR"
+  },
+  {
+    "title": "Pound Sterling",
+    "sym": "£",
+    "iso": "GBP"
+  },
+  {
+    "title": "Australian Dollar",
+    "sym": "$",
+    "iso": "AUD"
+  },
+  {
+    "title": "Canadian Dollar",
+    "sym": "$",
+    "iso": "CAD"
+  },
+  {
+    "title": "Swiss Franc",
+    "sym": "Fr",
+    "iso": "CHF"
+  },
+  {
+    "title": "Chinese Renminbi",
+    "sym": "¥",
+    "iso": "CNY"
+  },
+  {
+    "title": "Japanese Yen",
+    "sym": "¥",
+    "iso": "JPY"
+  },
+  {
+    "title": "Hong Kong Dollar",
+    "sym": "$",
+    "iso": "HKD"
+  },
+  {
+    "title": "Mexican Peso",
+    "sym": "$",
+    "iso": "MXN"
+  }
+]

@@ -1,8 +1,6 @@
-
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, render_template
 from get_currenty import main
-from get_tbai_info import main_tbai
-import json
+
 from datetime import datetime
 
 app = Flask(__name__)
@@ -10,18 +8,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return "Hello World"
+    return 'Home Page Route'
 
 
-@app.route('/user/<user>')
-def user(user):
-    return "Hello: " + user
-
-
-@app.route('/post/<post_id>')
-def post(post_id):
-    moco = int(post_id) + 4
-    return "Post Number: " + str(moco)
+@app.route('/api/<type>')
+def api(type):
+    if (type == 'icons'):
+        with open('./data/icons.json', mode='r') as my_file:
+            text = my_file.read()
+            return text
+    elif (type == 'currency'):
+        with open('./data/currency.json', mode='r') as my_file:
+            text = my_file.read()
+            return text
 
 
 @app.route('/conversor/<currency>-<amount>')
@@ -29,12 +28,6 @@ def currency(currency, amount):
     currency_info = main(currency)
     final_money = str(float(amount) * float(currency_info))
     return f'{amount} {currency} to EUR is: {final_money}'
-
-    
-@app.route('/tbaiqr/<id>')
-def tbaiqr(id):
-    tbai_info = main_tbai(id)
-    return f'This is the tbai info {tbai_info}'
 
 
 @app.route('/translator', methods=['POST'])
